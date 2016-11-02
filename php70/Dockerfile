@@ -20,6 +20,9 @@ RUN apt-get install --no-install-recommends -qy less vim-tiny
 RUN apt-get install --no-install-recommends -qy apg
 RUN apt-get install --no-install-recommends -qy sudo
 
+# Install other needed extensions
+RUN apt-get install --no-install-recommends -qy libfontconfig
+
 # Supervisor
 RUN mkdir -p /var/log/supervisor
 ADD supervisor/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
