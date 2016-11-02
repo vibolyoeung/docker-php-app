@@ -14,14 +14,11 @@ RUN apt-get update
 RUN apt-get install --no-install-recommends -qy apt-utils
 RUN apt-get install --no-install-recommends -qy supervisor
 RUN apt-get install --no-install-recommends -qy apache2
-RUN apt-get install --no-install-recommends -qy --force-yes php7.0 php7.0-xml php7.0-curl php7.0-intl php7.0-pgsql php-apcu php7.0-dev
+RUN apt-get install --no-install-recommends -qy --force-yes php7.0 php7.0-xml php7.0-curl php7.0-intl php7.0-pgsql php-apcu php7.0-dev php7.0-sqlite3
 RUN apt-get install --no-install-recommends -qy git
 RUN apt-get install --no-install-recommends -qy less vim-tiny
 RUN apt-get install --no-install-recommends -qy apg
 RUN apt-get install --no-install-recommends -qy sudo
-
-# Install other needed extensions
-RUN apt-get install --no-install-recommends -qy libfontconfig
 
 # Supervisor
 RUN mkdir -p /var/log/supervisor
